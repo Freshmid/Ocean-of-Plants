@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Ocean of Plants</title>
+</head>
+
+<style>
+html {
+    scroll-behavior: smooth
+}
+body, html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    margin: 0;
+}
+
+.image_container {
+    height: 100%;
+    width: 100%;
+    border-bottom: 1.4vw solid #A1C567; 
+}
+
+.home_bg {
+    height: 100%;
+    width: 100%; 
+    /* object-fit: cover; */
+    background-image: url("/static/img/dylan-de-jonge-9SjCXUq_qSE-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: brightness(60%);
+    
+    /* filter: blur(4px); */
+    /* -webkit-filter: blur(4px); */
+}
+
+
+.navbar {
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 22px;
+    position: fixed;
+    height: 52px;
+    width: 100%;
+    background-color: #A1C56760;
+    /* background-color: transparent; */
+    box-shadow: 0px 4px 2px #00000025;
+    transition: background-color 0.4s;
+}
+
+.navbar.solid {
+  background-color: #A1C567;
+  transition: background-color 0.4s;
+}
+
+.navbar a {
+    position: fixed;
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    right: 24vw;
+}
+
+.about {
+    right: 10vw;
+}
+
+.home:hover {
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.about:hover {
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu { 
+    word-spacing: 6vw;
+    float: right;
+    overflow: hidden;
+    text-align: right;
+    margin-top: 12px;
+    margin-right: 8vw;
+}
+
+.logo {
+    float: left;
+    text-align: left;
+    margin-top: 12px;
+    margin-left: 8vw;
+}
+
+
+.input-file {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 12px;
+    top: 45%;
+    left: 30%;
+    width: 40%;
+    height: 44px;
+    background-color: #A1C567;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s;
+    border-left: 4px solid #A1C567;
+    border-bottom: 4px solid #A1C567;
+}
+
+.input-file:hover {
+    top: 44.5%;
+    left: 30.5%;
+    width: 39%;
+    height: 46px;
+    background-color: #A1C567;
+    border-left: 4px solid #728b4a;
+    border-bottom: 4px solid #728b4a;
+}
+
+.opening_text {
+    text-align: center;
+    font-weight: bold;
+    width: 36%;
+    top: 20%;
+    left: 32%;
+    position: absolute;
+    color: white;
+    font-size: 3vw;
+}
+
+
+.desc img {
+    display: inline-block;
+    border-radius: 12px;
+    margin-top: 16vw;
+    margin-left: 14vw;
+    width: 30%;
+    height: 18vw;
+    object-fit: cover;
+}
+
+.desc_text {
+    display: inline-block;
+    vertical-align: 4vw;
+    margin-left: 2vw;
+    width: 40%;
+    overflow: auto;
+    font-size: 1.4vw;
+
+}
+
+.uploaded {
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    margin-bottom: 50px;
+    top: 42%;
+    left: 35%;
+}
+
+.output {
+    color: black;
+    font-size: 48px;
+}
+
+.desc_soil {
+    margin-top: 18vw;
+    position: relative;
+    left: 14vw;
+    width: 80%;
+    height: 92vw;
+    
+}
+
+.desc_soil img {
+    margin-bottom: 8vw;
+    position: relative;
+    width: 14vw;
+    height: 14vw;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.soil_img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.soil_type_desc {
+    margin-left: 2%;
+    width: 70%;
+    display: inline-block;
+    font-size: 1.2vw;
+}
+
+.silt .soil_type_desc, .loam .soil_type_desc{
+    text-align: right;
+    margin-right: 2%;
+    margin-left: 0;
+}
+
+
+.about_us {
+    width: 100%;
+    height: 18vw;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.up {
+    z-index: 2;
+    bottom: 16vw;
+    left: 48%;
+    position: absolute;
+}
+
+.up img:hover {
+    transition: 0.2s;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px #A1C567;
+}
+
+.up img{
+    
+    height: 4vw;
+    width: 4vw;
+}
+
+
+.img_us {
+    height: 100%;
+    width: 100%; 
+    background-image: url("/static/img/what-sets-premium-garden-soil-apart.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    filter: brightness(60%);
+}
+
+.about_us h1 {
+    text-decoration: underline;
+}
+
+.txt_us {
+    top: 4vw;
+    width: 100%;
+    position: relative;
+    font-size: 1.4vw;
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="logo" href="">Ocean of Plants</a>
+        <div class="menu">
+            <a class="home" href="#home">Home</a>
+            <a class="about" href="#about">About</a>
+        </div>
+    </div>
+
+    <section id="home"></section>
+    <div class="image_container">
+        <div class="home_bg"></div>
+    </div>
+    
+    
+    <form id="form" method="POST" enctype=multipart/form-data>
+        <input type="file" accept="image/gif, image/jpeg, image/png" onchange="loadFile(event)" id="select-file" name="file" hidden>
+        <label class="input-file" for="select-file" >Select File</label>
+    </form>
+    {% if result is defined %}
+    <p class="opening_text">{{result}}</p>  
+    {% else %}
+    <p class="opening_text">Check Your Soil Now!</p>
+    {% endif %}
+
+    <section id="about"></section>
+    <div class="main">
+        <div class="desc">
+            <img src="/static/img/zoe-schaeffer-c3rmcDjVDbc-unsplash.jpg">
+            <div class="desc_text">
+                <h1>About Soil</h1>
+                <p>Soil is the second most important factor in growing healthy vegetable plants. There are many types of soil. We pick 4 types of soil to identify how good your soil is for gardening or farming.</p>
+            </div>
+        </div>
+        <div class="desc_soil">
+            <div class="clay">
+                <div class="soil_img"><img src="/static/img/clay soil.jpg"></div>
+                <div class="soil_type_desc">
+                    <h1>Clay Soil</h1>
+                    <p>Clay is a soft, loose, earthy material containing particles with a grain size of less than 4 micrometres. Clay Soil is a heavy soil type that benefits from high nutrients but remain wet and cold in winter and dry out in summer.</p>
+                </div>
+            </div>
+            <div class="silt">
+                
+                <div class="soil_type_desc">
+                    <h1>Silt Soil</h1>
+                    <p>Silt is granular material of a size between sand and clay and composed mostly of broken grains of quartz. As silt soils compromise of medium sized particles they are well drained and hold moisture well. Silt soil can be easily compacted and are prone to washing away with rain.</p>
+                </div>
+                <div class="soil_img"><img class="img2" src="/static/img/silt soil.jpg"></div>
+            </div>
+            <div class="sand">
+                <div class="soil_img"><img class="img3" src="/static/img/Mason-Sand.jpg"></div>
+                <div class="soil_type_desc">
+                    <h1>Sandy Soil</h1>
+                    <p>Sandy Soil is light, warm, dry and tends to be acidic and low in nutrients. They are quicker to warm up in spring than clay soils but tend to dry out in summer and suffer from low nutrients that are washed away by rain.</p>
+                </div>
+            </div>
+            <div class="loam">
+            
+                <div class="soil_type_desc">
+                    <h1>Loam Soil</h1>
+                    <p>Loam soil is a mixture of sand, silt and clay that are combined to avoid the negative effects of each type. These soils are fertile, easy to work with and provide good drainage. As the soils are a perfect balance of soil particles, they are considered to be a gardeners best friend, but still benefit from topping up with additional organic matter.</p>
+                </div>
+                <div class="soil_img"><img class="img4" src="/static/img/fertile-loam-soil-suitable-planting-soil-texture-background_38663-327.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <section id="us"></section>
+    <div class="about_us">
+        <a class="up" href="#home">
+            <img src="/static/img/arrow-up.png">
+        </a>
+        <div class="about_container">
+            <div class="img_us"></div>
+            <div class="txt_us">
+                <h1>About Us</h1>
+                <p>This site's purpose is to help people grow their own healthy vegetable by telling them how good is their soil from a photo.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 300) { 
+              $('.navbar').addClass('solid');
+          } else {
+              $('.navbar').removeClass('solid');
+          }
+        });
+    });
+    
+    document.getElementById("select-file").onchange = function() {
+        document.getElementById("form").submit();
+    };
+
+  
+
+    
+</script>
+</html>
