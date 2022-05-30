@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import matplotlib.pyplot as plt
 import numpy as np
 from keras.preprocessing import image
-from tensorflow import keras
+import keras
 import os
 
 
@@ -41,5 +41,5 @@ def main():
     else:
         return "Unsupported Request Method"
 
-# if __name__ == '__main__':
-#     app.run(port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
