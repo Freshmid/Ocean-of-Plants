@@ -31,4 +31,3 @@ tensorflow-io-gcs-filesystem==0.24.0
 keras==2.8.0
 Keras-Preprocessing==1.1.2
 matplotlib==3.5.1
-gunicorn
