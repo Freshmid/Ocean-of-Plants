@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 from keras.preprocessing import image
 import keras
@@ -28,7 +28,7 @@ def main():
         
         img = image.load_img(dest, target_size=(200, 200))
         x = image.img_to_array(img)
-        plt.imshow(x/255.)
+        # plt.imshow(x/255.)
         x = np.expand_dims(x, axis=0)
         images = np.vstack([x])
         classes = model.predict(images, batch_size=10)
