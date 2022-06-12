@@ -1,0 +1,410 @@
+html {
+    scroll-behavior: smooth
+}
+body, html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    margin: 0;
+}
+
+.image_container {
+    height: 100%;
+    width: 100%;
+    border-bottom: 1.4vw solid #137547; 
+    /* border-bottom: 1.4vw solid #cccccc;  */
+}
+
+.home_bg {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: brightness(60%);
+}
+
+
+.navbar {
+    top: 0;
+    overflow: hidden;
+    z-index: 5;
+    font-size: 22px;
+    position: fixed;
+    height: 52px;
+    width: 100%;
+    background-color: #13754760;
+    /* background-color: transparent; */
+    box-shadow: 0px 4px 2px #00000025;
+    transition: background-color 0.4s;
+}
+
+.navbar.solid {
+  background-color: #137547;
+  transition: background-color 0.4s;
+}
+
+.navbar a {
+    position: fixed;
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    right: 24vw;
+}
+
+.about {
+    right: 10vw;
+}
+
+.home:hover {
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.about:hover {
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu { 
+    word-spacing: 6vw;
+    float: right;
+    overflow: hidden;
+    text-align: right;
+    margin-top: 12px;
+    margin-right: 8vw;
+}
+
+.logo {
+    float: left;
+    text-align: left;
+    margin-top: 2px;
+    margin-left: 8vw;
+}
+
+.logo img {
+    width: 183px;
+    height: 50px;
+}
+
+.chatbot {
+    transition: 0.2s;
+    z-index: 3;
+    position: fixed;
+    border-radius: 100%;
+    bottom: 5%;
+    right: 14%;
+    width: 5.4vw;
+    height: 5.4vw;
+    min-height: 42px;
+    min-width: 42px;
+    box-shadow: 0 4px 4px #00000045;
+    background-color: #137547;
+}
+
+.chatbot:hover {
+    transition: 0.2s;
+    background-color: #054a29;
+}
+
+.chatbot button {
+    margin-top: 20%;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.chatbot img {
+    min-width: 26px;
+    min-height: 26px;
+    width: 75%;
+    height: 75%;
+}
+
+#open {
+    display: block;
+    /* background-color: #cccccc; */
+}
+
+#close {
+    display: none;
+    /* left: 60vw; */
+    /* background-color: #137547; */
+}
+
+
+#chat_box {
+    display: none;
+    right: 14%;
+    bottom: 130px;
+    z-index: 3;
+    position: fixed;
+    width: 30%;
+    min-width: 240px;
+    height: 275px;
+    box-shadow: 0 10px 10px #00000085;
+    border-radius: 8px;
+}
+
+.message_box {
+    overflow-y: scroll;
+    background-color: #dfdfdf;
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 2px; */
+    border-radius: 8px;
+    /* border: 4px solid #adadad; */
+}
+
+.chat_data {
+    overflow-x: hidden;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.img_devi {
+    position: fixed;
+    bottom: 370px;
+    text-align: center;
+    width: 30%;
+    min-width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #ff000025; */
+}
+
+.img_devi img{
+    min-width: 54px;
+    min-height: 54px;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+    border: 5px solid #137547;
+}
+
+.about_devi {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    min-width: 240px;
+    position: fixed;
+    bottom: 300px;
+    height: 110px;
+    text-align: center;
+    margin-top: 44px;
+    width: 30%;
+    background: #137547;
+}
+
+.about_devi p {
+    color: white;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+#question {
+    border-radius: 8px;
+    resize: none;
+    min-height: 32px;
+    width: 20vw;
+    min-width: 64%;
+    
+}
+
+.input_message {
+    background-color: #dfdfdf;
+    position: fixed;
+    bottom: 120px;
+    width: 30%;
+    height: 38px;
+    min-width: 240px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.input_message .btn {
+    vertical-align: 100%;
+    width: 30%;
+    height: 36px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #5bba6f;
+}
+
+.input_message .btn:hover {
+    transition: 0.2s;
+    background-color: #137547;
+    color: white;
+}
+
+
+.input-file {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 12px;
+    top: 45%;
+    left: 30%;
+    width: 40%;
+    height: 44px;
+    background-color: #5bba6f;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s;
+    border-left: 4px solid #5bba6f;
+    border-bottom: 4px solid #5bba6f;
+}
+
+.input-file:hover {
+    top: 44.5%;
+    left: 30.5%;
+    width: 39%;
+    height: 46px;
+    background-color: #5bba6f;
+    border-left: 4px solid #137547;
+    border-bottom: 4px solid #137547;
+}
+
+.opening_text {
+    text-align: center;
+    font-weight: bold;
+    width: 36%;
+    top: 20%;
+    left: 32%;
+    position: absolute;
+    color: white;
+    font-size: 3vw;
+}
+
+
+.desc img {
+    display: inline-block;
+    border-radius: 12px;
+    margin-top: 16vw;
+    margin-left: 14vw;
+    width: 30%;
+    height: 18vw;
+    object-fit: cover;
+}
+
+.desc_text {
+    display: inline-block;
+    vertical-align: 4vw;
+    margin-left: 2vw;
+    width: 40%;
+    overflow: auto;
+    font-size: 1.4vw;
+
+}
+
+.uploaded {
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    margin-bottom: 50px;
+    top: 42%;
+    left: 35%;
+}
+
+.output {
+    color: black;
+    font-size: 48px;
+}
+
+.desc_soil {
+    margin-top: 18vw;
+    position: relative;
+    left: 14vw;
+    width: 80%;
+    height: 92vw;
+    
+}
+
+.desc_soil img {
+    margin-bottom: 8vw;
+    position: relative;
+    width: 14vw;
+    height: 14vw;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.soil_img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.soil_type_desc {
+    margin-left: 2%;
+    width: 70%;
+    display: inline-block;
+    font-size: 1.2vw;
+}
+
+.silt .soil_type_desc, .loam .soil_type_desc{
+    text-align: right;
+    margin-right: 2%;
+    margin-left: 0;
+}
+
+
+.about_us {
+    width: 100%;
+    height: 18vw;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.up {
+    z-index: 2;
+    bottom: 16vw;
+    left: 48%;
+    position: absolute;
+}
+
+.up img:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 4px #137547;
+}
+
+.up img{
+    border-radius: 100%;
+    height: 4vw;
+    width: 4vw;
+}
+
+
+.img_us {
+    height: 100%;
+    width: 100%; 
+    background-image: url("/static/img/what-sets-premium-garden-soil-apart.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    filter: brightness(60%);
+}
+
+.about_us h1 {
+    text-decoration: underline;
+}
+
+.txt_us {
+    top: 4vw;
+    width: 100%;
+    position: relative;
+    font-size: 1.4vw;
+}
