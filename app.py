@@ -95,25 +95,14 @@ def main():
         classes = model.predict(images, batch_size=10)
         print(classes[0])
         if classes[0]<0.5:
-            result = "Your soil is in good condition!"
+            result = "Kondisi tanah anda sudah cukup baik!"
         else:
-            result = "Your soil is not fertile"
+            result = "Tanah anda kurang subur"
         return render_template("index.html" , result=result, filename='img/'+file_name)
 
     else:
         return "Unsupported Request Method"
 
-# @app.route('/chat', methods=['POST'])
-# def chat():
-#     bot = "Selamat datang di FindField! Devi akan membantu menjawab pertanyaan anda semaksimal mungkin!"
-#     talk = request.form.get("talk")
-#     if talk:
-#         bot = chatbot_response(talk)
-#     print(talk)
-#     print(bot)
-#     print(type(talk))
-#     # return jsonify("", render_template("chat_bot.html", data=bot))
-#     return render_template(botchat=bot)
 
 @app.route('/chatbot', methods=["GET", "POST"])
 def chatbotResponse():

@@ -1,73 +1,113 @@
 {"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+        {"tag": "sapaan",
+         "patterns": ["Halo", "Hi", "Hai", "Apa kabar?", "Permisi", "Tolong bantu saya", "Apakah ada orang?", "Hey","Hola", "Hello", "Selamat Pagi", "Selamat Siang", "Selamat Sore", "Selamat Malam"],
+         "responses": ["Halo kawan, apakah ada yang bisa dibantu?", "Menyenangkan bisa bertemu dengan anda kembali, apa yang bisa saya bantu?"],
          "context": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "patterns": ["Selamat Tinggal", "Sampai Jumpa", "Bye", "Goodbye", "Senang berbicara denganmu", "Sampai bertemu kembali"],
+         "responses": ["Selamat tinggal, sampai bertemu kembali", "Sampai jumpa, semoga harimu menyenangkan"],
          "context": [""]
         },
         {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "patterns": ["Thanks", "Thank you", "Terimakasih", "Terima kasih", "Makasih atas bantuannya", "Thx"],
+         "responses": ["Senang membantu anda!", "Sama-sama!", "Dengan senang hati"],
          "context": [""]
         },
-        {"tag": "noanswer",
+        {"tag": "tanpa_jawaban",
          "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "responses": ["Maaf, saya kurang mengerti maksud anda", "Saya tidak memahami maksud anda, mohon tolong tambahkan informasi yang lebih detail", "Saya kurang paham maksud dari pernyataan tersebut"],
          "context": [""]
         },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+        {"tag": "penawaran",
+         "patterns": ["Apa yang bisa anda bantu?", "Apa yang bisa anda lakukan?", "Bantuan apa yang anda sediakan?", "Bagaimana anda dapat membantu saya?", "Pertolongan apa saja yang anda tawarkan disini", "Saya butuh bantuan"],
+         "responses": ["Saya bisa membantu anda seputar permasalahan terkait tanah, baik melihat kualitas tanah ataupun campuran tanah yang dapat berguna untuk keperluan anda"],
          "context": [""]
         },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
+        {"tag": "penggunaan_web",
+         "patterns": ["Bagaimana cara menggunakan web ini?", "Seperti apa cara menggunakan web ini?", "Apa yang perlu saya lakukan untuk menggunakan web ini?", "Apakah ada panduan untuk menggunakan web ini?", "Saya tidak mengerti cara menggunakan web ini", "Saya ingin mendeteksi tanah", "Saya ingin mengetahui tanah yang saya miliki"],
+         "responses": ["Panduan penggunaan web; pertama buka halaman web, kemudian kedua pilih bagian masukan gambar untuk memasukkan gambar tanah yang ingin dideteksi, selanjutnya ketiga pilih gambar tanah yang ingin dideteksi, dan hasilnya akan muncul"],
          "context": [""]
         },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
+        {"tag": "panduan_chatbot",
+         "patterns": ["Bagaimana saya dapat berinteraksi dengan anda?", "Bagaimana cara saya menggunakan chatbot ini?"],
+         "responses": ["Cukup ketikan apa saja yang anda ingin ketahui mengenai tanah"],
          "context": [""]
         },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
+        {"tag": "rekomendasi_tanah_tanamanhias",
+         "patterns": ["Tanah apa yang cocok untuk tanaman hias saya?", "Tanah apa yang dapat saya gunakan untuk tanaman hias?", "Tanaman hias"],
+         "responses": ["Tanah humus atau tanah berpasir sangat cocok untuk digunakan pada jenis tanaman tersebut"],
          "context": [""]
         },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
+        {"tag": "rekomendasi_tanah_lahansawah",
+         "patterns": ["Saya ingin membuka lahan untuk pertanian atau daerah sawah, kira-kira tanah apa yang cocok?", "Pertanian", "Sawah"],
+         "responses": ["Tanah gambut atau tanah aluvial sangat cocok untuk digunakan pada jenis penggunaan daerah pertanian"],
          "context": [""]
         },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
+        {"tag": "tanah_subur",
+         "patterns": ["Apa itu tanah subur?", "Apa yang dimaksud dengan tanah subur?", "Tanah subur?", "Bagaimana cara membuat tanah yang kering dan tandus menjadi subur?", "Tanah yang saya miliki kering dan tandus, bagaimana cara mengubahnya kembali menjadi subur?", "Mengubah tanah kering menjadi tanah subur"],
+         "responses": ["Tanah subur adalah tanah yang layak untuk ditanami tumbuhan. Cara mengembalikan tanah menjadi subur; rajin menyiramnya dengan air secara rutin, membuat jalur irigasi atau pengairan, melakukan pembajakan pada tanah tersebut, memperkokoh tanah, menaikan porositas."],
          "context": [""]
-        }
+        },
+        {"tag": "irigasi",
+         "patterns": ["Apa itu irigasi?", "Apa yang dimaksud dengan irigiasi?", "Irigasi?"],
+         "responses": ["Irigasi atau pengairan merupakan upaya yang dilakukan untuk mengairi lahan, sehingga mengupayakan tanah tersebut tetap subur untuk pertumbuhan tanaman dalam waktu yang lama. Biasanya dilakukan dalam sektor pertanian."],
+         "context": [""]
+        },
+        {"tag": "porositas",
+         "patterns": ["Apa itu porositas?", "Apa yang dimaksud dengan porositas?", "Porositas?"],
+         "responses": ["Porositas adalah prosentase total pori dalam tanah yang ditempati oleh air dan udara, dibandingkan dengan volume total tanah."],
+         "context": [""]
+        },
+        {"tag": "kualitas_tanah",
+         "patterns": ["Cara menjaga kualitas tanah", "Bagaimana cara untuk dapat menjaga kualitas tanah?", "Menjaga kualitas tanah"],
+         "responses": ["Cara menjaga kualitas tanah dapat dilakukan dengan serangkaian cara, seperti halnya; memberikan pupuk pada tanah, membuat sistem irigasi atau pengairan, menanami tanah dengan tanaman, merawat tanah dengan menghindari dari pemakaian zat kimia dan penerapan sistem terasering pada lahan besar"],
+         "context": [""]
+        },
+        {"tag": "pupuk",
+         "patterns": ["Apa itu pupuk?", "Apa yang dimaksud dengan pupuk?", "Pupuk tanaman?", "Bagaimana cara saya menggunakan pupuk?", "Apa yang perlu saya lakukan dengan pupuk yang saya miliki?", "Pengaplikasian pupuk seperti apa?"],
+         "responses": ["Pupuk adalah suatu bahan yang mengandung satu atau lebih unsur hara atau nutrisi bagi tanaman untuk menopang tumbuh dan berkembangnya tanaman. Cara penggunaan atau pengaplikasiannya adalah dengan menyebarkannya secara merata pada tanah yang ingin diberikan pupuk kemudian campur kan hingga merata kedalam seluruh tanah tersebut, disarankan untuk dilakukan sehari sebelum tanaman ditanam"],
+         "context": [""]
+        },
+        {"tag": "kompos",
+         "patterns": ["Apa itu kompos?", "Apa yang dimaksud dengan kompos?", "Kompos?"],
+         "responses": ["Kompos juga merupakan salah satu jenis pupuk organik yang berasal dari penguraian/dekomposisi bahan organik yg dilakukan oleh mikro-organisme aktif (bakteri/jamur/mikroba)."],
+         "context": [""]
+        },
+        {"tag": "rekomendasi_pupuk",
+         "patterns": ["Apakah ada rekomendasi pupuk?", "Pupuk apa yang bisa saya gunakan untuk memupuk tanaman saya?", "Jenis pupuk apa yang dapat saya gunakan pada tanaman hias?"],
+         "responses": ["Pupuk memiliki banyak sekali jenisnya dan manfaat yang berbeda-beda pada penggunaannya. Untuk tanaman hias dapat menggunakan pupuk NPK dan PLP sambil diberi vitamin untuk tanaman hias, bila pada persawahan dapat menggunakan pupuk NPK"],
+         "context": [""]
+        },
+        {"tag": "pupuk_NPK",
+         "patterns": ["Apa itu pupuk NPK?", "Apa yang dimaksud dengan pupuk NPK?", "Pupuk NPK?"],
+         "responses": ["Pupuk NPK memiliki berbagai macam jenis, pupuk NPK itu sendiri merupakan pupuk buatan yang berbentuk cair atau padat berupa butiran kasar yang mengandung unsur hara utama nitrogen, fosfor, dan kalium. Pupuk NPK merupakan salah satu jenis pupuk majemuk yang paling umum digunakan."],
+         "context": [""]
+        },
+        {"tag": "pupuk_PLP",
+         "patterns": ["Apa itu pupuk PLP?", "Apa yang dimaksud dengan pupuk PLP?", "Pupuk PLP?"],
+         "responses": ["Pupuk Langsung Pakai (PLP) merupakan pupuk praktis berbentuk cair yang berfungsi untuk meningkatkan pertumbuhan tanaman yang masih berusia muda."],
+         "context": [""]
+        },
+        {"tag": "terasering",
+         "patterns": ["Apa itu terasering?", "Apa yang dimaksud dengan terasering?", "Terasering?"],
+         "responses": ["Terasering atau sengkedan merupakan metode konservasi dengan membuat teras-teras yang dilakukan untuk mengurangi panjang lereng, menahan air sehingga mengurangi kecepatan dan jumlah aliran permukaan, serta memperbesar peluang penyerapan air oleh tanah."],
+         "context": [""]
+        },
+        {"tag": "campuran_tanah",
+         "patterns": ["Apa itu campuran tanah?", "Apa yang dimaksud dengan campuran tanah?", "Campuran tanah?"],
+         "responses": ["Campuran tanah adalah salah satu bentuk upaya mencampurkan tanah dalam sebuah wadah maupun lahan untuk menyesuaikan kebutuhan tanah yang cocok digunakan pada tempat tersebut. Seperti halnya mencampurkan tanah dengan kompos serta arang untuk membuat media tanaman organik."],
+         "context": [""]
+        }, 
+        {"tag": "penyiraman_tanaman",
+         "patterns": ["Pada tanaman hias yang saya miliki, bagaimana waktu untuk penyiraman tanaman tersebut?", "Kuantitas penyiraman tanaman secara rutin seperti apa?", "Waktu penyiraman tanaman kapan saja?"],
+         "responses": ["Penyiraman tanaman sendiri bergantung pada jenis tanaman yang ditanam, namun bila bicara secara general waktu yang tepat untuk menyiram tanaman adalah pagi dan sedikit ketika sore hari. Karena waktu terbaik untuk menyiram tanaman adalah pagi hari, karena akan memberi tanaman waktu untuk mengering sebelum malam hari. Membiarkan air diam di tanaman semalaman bisa memicu pertumbuhan jamur."],
+         "context": [""]
+        },
+        {"tag": "cara_mengetahui_tanah_subur",
+         "patterns": ["Bagaimana cara mengetahui suatu tanah subur atau tidak?", "Cara mengetahui tanah subur?", "Apakah tanah saya subur bila menunjukkan sifat seperti ini?", "Bagaimana kriteria tanah yang subur?"],
+         "responses": ["Tanah subur merupakan tanah yang dapat ditanami oleh tanaman. Dari segi fisiknya dapat terlihat bahwasanya tanah subur ini sendiri merupakan tanah yang lembak dan memiliki biota tanah yang melimpah, tanah subur ini sendiri juga memiliki nilai pH yang normal (6-8)"],
+         "context": [""]
+        } 
    ]
 }
