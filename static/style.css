@@ -103,7 +103,7 @@ body, html {
     height: 5.4vw;
     min-height: 42px;
     min-width: 42px;
-    box-shadow: 0 4px 4px #00000045;
+    box-shadow: 0 4px 8px #00000085;
     background-color: #137547;
 }
 

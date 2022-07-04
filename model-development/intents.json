@@ -1,12 +1,12 @@
 {"intents": [
         {"tag": "sapaan",
          "patterns": ["Halo", "Hi", "Hai", "Apa kabar?", "Permisi", "Tolong bantu saya", "Apakah ada orang?", "Hey","Hola", "Hello", "Selamat Pagi", "Selamat Siang", "Selamat Sore", "Selamat Malam"],
-         "responses": ["Halo kawan, apakah ada yang bisa dibantu?", "Menyenangkan bisa bertemu dengan anda kembali, apa yang bisa saya bantu?"],
+         "responses": ["Halo! Apakah ada yang bisa dibantu?", "Apa kabar! Ada yang ingin anda tanyakan?"],
          "context": [""]
         },
         {"tag": "goodbye",
          "patterns": ["Selamat Tinggal", "Sampai Jumpa", "Bye", "Goodbye", "Senang berbicara denganmu", "Sampai bertemu kembali"],
-         "responses": ["Selamat tinggal, sampai bertemu kembali", "Sampai jumpa, semoga harimu menyenangkan"],
+         "responses": ["Bye! sampai bertemu kembali!", "Sampai jumpa! semoga harimu menyenangkan!"],
          "context": [""]
         },
         {"tag": "thanks",
@@ -26,7 +26,7 @@
         },
         {"tag": "penggunaan_web",
          "patterns": ["Bagaimana cara menggunakan web ini?", "Seperti apa cara menggunakan web ini?", "Apa yang perlu saya lakukan untuk menggunakan web ini?", "Apakah ada panduan untuk menggunakan web ini?", "Saya tidak mengerti cara menggunakan web ini", "Saya ingin mendeteksi tanah", "Saya ingin mengetahui tanah yang saya miliki"],
-         "responses": ["Panduan penggunaan web; pertama buka halaman web, kemudian kedua pilih bagian masukan gambar untuk memasukkan gambar tanah yang ingin dideteksi, selanjutnya ketiga pilih gambar tanah yang ingin dideteksi, dan hasilnya akan muncul"],
+         "responses": ["Panduan penggunaan web; pertama buka halaman web, kedua pilih bagian masukan gambar untuk memasukkan gambar tanah yang ingin dideteksi, ketiga pilih gambar tanah yang ingin dideteksi, dan hasilnya akan muncul!"],
          "context": [""]
         },
         {"tag": "panduan_chatbot",
